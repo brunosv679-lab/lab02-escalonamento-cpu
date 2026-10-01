@@ -1,0 +1,16 @@
+
+--- SIMULACAO FCFS ---
+Proc P1: Fim = 8ms, Espera = 0ms, Retorno = 8ms
+Proc P2: Fim = 12ms, Espera = 7ms, Retorno = 11ms
+Proc P3: Fim = 21ms, Espera = 10ms, Retorno = 19ms
+Proc P4: Fim = 26ms, Espera = 18ms, Retorno = 23ms
+Tempo Medio de Espera: 8.75 ms
+Tempo Medio de Retorno: 15.25 ms
+
+--- SIMULACAO ROUND ROBIN (Quantum 3 ms) ---
+Proc P1: Fim = 23ms, Espera = 15ms, Retorno = 23ms
+Proc P2: Fim = 16ms, Espera = 11ms, Retorno = 15ms
+Proc P3: Fim = 26ms, Espera = 15ms, Retorno = 24ms
+Proc P4: Fim = 21ms, Espera = 13ms, Retorno = 18ms
+Tempo Medio de Espera: 13.50 ms
+Tempo Medio de Retorno: 20.00 ms

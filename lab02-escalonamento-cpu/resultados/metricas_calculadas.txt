@@ -1,0 +1,34 @@
+--- FCFS ---
+Linha do tempo: P1[0-8] | P2[8-12] | P3[12-21] | P4[21-26]
+Proc P1: Fim = 8ms, Espera = 0ms, Retorno = 8ms
+Proc P2: Fim = 12ms, Espera = 7ms, Retorno = 11ms
+Proc P3: Fim = 21ms, Espera = 10ms, Retorno = 19ms
+Proc P4: Fim = 26ms, Espera = 18ms, Retorno = 23ms
+Tempo Medio de Espera: 8.75 ms
+Tempo Medio de Retorno: 15.25 ms
+Trocas de contexto: 3
+
+--- SJF (nao-preemptivo) ---
+Linha do tempo: P1[0-8] | P2[8-12] | P4[12-17] | P3[17-26]
+Proc P1: Fim = 8ms, Espera = 0ms, Retorno = 8ms
+Proc P2: Fim = 12ms, Espera = 7ms, Retorno = 11ms
+Proc P3: Fim = 26ms, Espera = 15ms, Retorno = 24ms
+Proc P4: Fim = 17ms, Espera = 9ms, Retorno = 14ms
+Tempo Medio de Espera: 7.75 ms
+Tempo Medio de Retorno: 14.25 ms
+Trocas de contexto: 3
+
+--- ROUND ROBIN (q=3) ---
+Linha do tempo: P1[0-3] | P2[3-6] | P3[6-9] | P4[9-12] | P1[12-15] | P2[15-16] | P3[16-19] | P4[19-21] | P1[21-23] | P3[23-26]
+Proc P1: Fim = 23ms, Espera = 15ms, Retorno = 23ms
+Proc P2: Fim = 16ms, Espera = 11ms, Retorno = 15ms
+Proc P3: Fim = 26ms, Espera = 15ms, Retorno = 24ms
+Proc P4: Fim = 21ms, Espera = 13ms, Retorno = 18ms
+Tempo Medio de Espera: 13.50 ms
+Tempo Medio de Retorno: 20.00 ms
+Trocas de contexto: 9
+
+--- VARIACAO DO QUANTUM (Round Robin) ---
+Quantum  1 ms: fatias = 26, trocas de contexto = 23, espera media = 12.50 ms, retorno medio = 19.00 ms
+Quantum  3 ms: fatias = 10, trocas de contexto =  9, espera media = 13.50 ms, retorno medio = 20.00 ms
+Quantum 50 ms: fatias =  4, trocas de contexto =  3, espera media = 8.75 ms, retorno medio = 15.25 ms
